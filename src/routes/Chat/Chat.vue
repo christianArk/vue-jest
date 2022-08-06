@@ -13,7 +13,7 @@
 
             <div class="card-body">
 
-                <div v-for="message in messages" v-bind:key="message.id">
+                <div v-for="message in messages" v-bind:key="message.id" class="message-display">
 
                     <strong>{{message.sender}}:</strong> <span>{{message.content}}</span>
 
@@ -46,7 +46,7 @@
 
         data(){
 
-            console.log("This?", this);
+            // console.log("This?", this);
 
             return {
 
@@ -60,7 +60,7 @@
             handleMessageSubmit(e){
 
                 e.preventDefault();
-                console.log("Submitted message", this.userMessage);
+                // console.log("Submitted message", this.userMessage);
                 this.$attrs.handleSubmitChatMessage(this.userMessage);
 
             }
